@@ -53,7 +53,7 @@ function userData () {
 }
 //1.- Solicitar al usuario 3 números por prompt y guardarlos en sus respectivas variables.
 let numeros = userData()
-const arregloOriginal = numeros;
+const arregloOriginal = [...numeros];
 //2.- Debe imprimir los números por consola o por el DOM ordenados de mayor a menor, y de menor a mayor.
 // Menor a mayor 
 numeros.sort((a, b) => a - b);
@@ -63,7 +63,9 @@ let menor = numeros[0];
 let centro = numeros[1];
 let mayor = numeros[2];
 
-console.log(`El numero menor es: ${menor}, el número del centro es ${centro} y finalmente el numero mayor es: ${mayor}`);
+console.log(`El numero menor es: ${menor}, 
+el número del centro es ${centro} 
+y finalmente el numero mayor es: ${mayor}`);
 
 // mayor a menor 
 numeros.sort((a, b) => b - a);
@@ -79,6 +81,8 @@ if (duplicados.length > 0 ) {
 } else { 
     console.log('No existen números duplicados :)');
 }
+
+console.log('Los números en orden original son: ' + arregloOriginal)
 
 
 
